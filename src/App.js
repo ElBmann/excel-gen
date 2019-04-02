@@ -47,7 +47,7 @@ class App extends Component {
     
   }
   companyHandleChange(event){
-    this.setState(state =>{
+    this.setState({
       company: event.target.value
     });
   }
@@ -129,7 +129,7 @@ class App extends Component {
        <Form
         submit = {this.handleSubmit.bind(this)}
         className = 'input4'
-        company = {this.state.POForms.company}
+        company = {this.companyHandleChange.bind(this)}
         facility ={this.facilityHandleChange.bind(this)}
         PONumber ={this.poNumberHandleChange.bind(this)}
         bol ={this.bolHandleChange.bind(this)}
